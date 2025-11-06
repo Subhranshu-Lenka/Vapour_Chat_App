@@ -24,7 +24,7 @@ function App() {
   console.log({ chatHistory });
 
   useEffect(() => {
-    socketRef.current = io("http://192.168.1.39:8069", {
+    socketRef.current = io(`${protocol}//${host}:8069`, {
       autoConnect: false,
     });
 
